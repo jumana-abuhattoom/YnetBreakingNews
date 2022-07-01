@@ -12,11 +12,7 @@ pipeline {
                  sh 'sudo nohup java -jar target/xmltohtml-0.0.1-SNAPSHOT.jar &'
             }
         }
-    
 
-    
-    
-    
     }
          post {
 
