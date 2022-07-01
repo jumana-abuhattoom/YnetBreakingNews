@@ -16,10 +16,9 @@ pipeline {
      post {
 
                 success {
-                        slackSend baseUrl: 'https://hooks.slack.com/services/', channel: '#jenkins', message: 'This build is succeed', teamDomain: 'fursa-co', tokenCredentialId: 'slack'}
-
-            }
-}
+                        slackSend baseUrl: 'https://hooks.slack.com/services/', channel: '#jenkins', message: 'This build is succeed', teamDomain: 'fursa-co', tokenCredentialId: 'slack'
+                }
+     }
     
     
     
