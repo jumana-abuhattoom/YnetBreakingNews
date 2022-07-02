@@ -8,8 +8,14 @@ import org.springframework.web.servlet.ModelAndView;
 import static com.example.demo.TableContent.getTable;
 
 @RestController
+
 public class ynetController {
     @RequestMapping("/")
+
+
+
+// ModelAndView is holding  both Model and View in the web framework
+
     public ModelAndView breakingNews(Model model) throws Exception {
         String table =  getTable();
         model.addAttribute("content", table);

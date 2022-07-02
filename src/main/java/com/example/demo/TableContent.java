@@ -14,11 +14,13 @@ import java.net.URL;
 public class TableContent {
 
     public static String getTable() throws Exception {
+
         String url =  "http://www.ynet.co.il/Integration/StoryRss2.xml";
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 
-        try {
+        // build the html table by our choice
 
+        try {
             String html_table = "<table>" +
                     "  <tr>" +
                     "    <th>תאריך</th>" +
@@ -32,9 +34,16 @@ public class TableContent {
 
             // optional, but recommended
             // http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work
+
+            //transforms Unicode text into an equivalent composed
             doc.getDocumentElement().normalize();
 
+// we go over the xml file and retrieve element by its tag name in order to
+
             NodeList list = doc.getElementsByTagName("item");
+
+            //we go over every node in the html xml file and take the title,description,link, and date for
+            //every single node and build it in a new html table .
             for (int i = 0; i < list.getLength(); i++) {
                 Node item = list.item(i);
                 Element element = (Element) item;
@@ -51,8 +60,13 @@ public class TableContent {
                         "  </tr>";
 
             }
+
+            //the closure of the table tag
             html_table += "</table>";
+            //returns the html table that we build it
             return html_table;
+
+            //exceptions
         } catch (ParserConfigurationException e) {
             throw new RuntimeException(e);
         } catch (SAXException e) {
