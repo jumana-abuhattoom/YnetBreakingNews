@@ -18,7 +18,7 @@ public class TableContent {
         String url =  "http://www.ynet.co.il/Integration/StoryRss2.xml";
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 
-        // build the html table by our choice
+        // build the html table by our choice..
 
         try {
             String html_table = "<table>" +

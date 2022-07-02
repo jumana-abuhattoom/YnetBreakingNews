@@ -14,7 +14,7 @@ public class ynetController {
 
 
 
-// ModelAndView is holding  both Model and View in the web framework
+// ModelAndView is holding  both Model and View in the web framework.
 
     public ModelAndView breakingNews(Model model) throws Exception {
         String table =  getTable();
