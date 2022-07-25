@@ -10,7 +10,7 @@
 git clone https://github.com/jumana-abuhattoom/YnetBreakingNews.git
 cd YnetBreakingNews
 mvn package  
-java -jar ./target/xmltohtml-0.0.1-SNAPSHOT.jar
+java -jar ./target/demo-0.0.1-SNAPSHOT.jar
 ```
 
 ![ynet1](https://user-images.githubusercontent.com/57894655/176967911-c2ea4557-f9d9-4b87-b979-c54c3fec6b23.PNG)
